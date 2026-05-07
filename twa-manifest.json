@@ -1,0 +1,14 @@
+{
+  "packageId": "com.velomistico.app",
+  "host": "velo-mistico.vercel.app",
+  "name": "Velo Mistico",
+  "launcherName": "Velo Mistico",
+  "display": "standalone",
+  "themeColor": "#000000",
+  "navigationColor": "#000000",
+  "backgroundColor": "#000000",
+  "startUrl": "/",
+  "iconUrl": "https://velo-mistico.vercel.app/icon-512.png",
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1
+}
