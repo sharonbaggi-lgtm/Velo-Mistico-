@@ -8,10 +8,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build TWA
-        uses: GoogleChromeLabs/bubblewrap-action@v0.0.2
+      
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          twa-manifest-path: ./twa-manifest.json
+          node-version: '20'
+          
+      - name: Install Bubblewrap
+        run: npm i -g @bubblewrap/cli
+        
+      - name: Build TWA
+        run: bubblewrap build --skipPwaValidation
+        
       - name: Upload AAB
         uses: actions/upload-artifact@v4
         with:
